@@ -1,0 +1,163 @@
+.reviews {
+    .reviews__slider{
+        max-width: 1535px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+
+        
+        .reviews__arrow {
+            display: block;
+            height: 81px;
+            width: 281px;
+            cursor: pointer;
+            margin: 0;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            @include media("max", "xl") {
+                width: 581px;
+            }
+            @include media("max", "sm") {
+                display: none;
+            }
+        }
+
+        .left {
+            background-image: url($images + "svg/slider_left_arrow.svg");
+        }
+        
+        .right {
+            background-image: url($images + "svg/slider_right_arrow.svg");
+        }
+
+        .reviews__cards {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            justify-content: flex-start;
+            align-items: center;
+            max-width: 1400px;
+            @include media("max", "sm") {
+                flex-direction: column;
+                margin-bottom: 40px;
+            }
+
+            .reviews__card {
+
+                min-width: 47%;
+                min-height: 372px;;
+                background: #FFFFFF;
+                box-shadow: 0px 4px 14px rgba(186, 186, 186, 0.2);
+                border-radius: 30px;
+                padding: 40px;
+                margin: 0 20px;
+                @include media("max", "lg"){
+                    min-height: 200px;
+                }
+                @include media("max", "sm"){
+                    border-radius: 30px;
+                    margin: 12px;
+                }
+
+                .reviews__card__header {
+                    display: flex;
+                    justify-content: flex-start;
+
+                    .reviews__card__photo img{
+                        width: 90px;
+                        height: 84px;
+                        border-radius: 10px;
+                        @include media("max", "lg"){ 
+                            // transform: scale(.6);
+                            width: 54px;
+                            height: 50px;
+                            border-radius: 6px;
+                        }
+                    }
+
+                    .reviews__card__header_text {
+                        margin: 0px  0 0 19px;
+                    
+                        .reviews__card__name {
+                            @extend %font_bold;
+                            font-size: 34px;
+                            line-height: 140%;
+                            color: #613FA5;
+                            @include media("max", "lg"){
+                                font-size: 16px;
+                            }
+                        }
+
+                        .reviews__card__descr {
+                            @extend %Gilroy_bold;
+                            font-size: 20px;
+                            line-height: 94%;
+                            color: #7574AC;
+                            @include media("max", "lg"){
+                                font-size: 10px;
+                            }
+                        }
+                    }
+                }
+
+                .reviews__card__text {
+                    padding: 24px 0px;
+                    @extend %font_bold;
+                    font-size: 21px;
+                    line-height: 140%;
+                    color: #613FA5;
+                    @include media("max", "lg"){
+                        padding: 6px 0px;
+                        font-size: 10px;
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .reviews__num_navs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 48px auto 108px;
+        @include media("max", "sm") {
+            display: none;
+        }
+
+        .reviews__num_navs__number {
+            @extend %font_bold;
+            font-size: 34px;
+            line-height: 140%;
+            color: #4B7CDB;
+        }
+
+        .reviews__num_navs__amount{
+            @extend %font_normal;
+            font-size: 24px;
+            line-height: 140%;
+            color: rgba(178, 178, 178, 0.4);
+            margin-left: 14px;
+        }
+
+        .reviews__num_navs__blocks {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .block {
+                width: 24px;
+                height: 3px;
+                background: #E7E7E7;
+                border-radius: 2px;
+                margin-left: 14px;
+            }
+
+            .active {
+                background: #4B7CDB;
+            }
+        }
+    }
+}

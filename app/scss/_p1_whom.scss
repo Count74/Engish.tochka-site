@@ -1,0 +1,110 @@
+.lighting {
+    position: relative;
+    width: 600px;
+    margin: 124px auto 0;
+
+    @include media("max", "lg") {
+        margin: 44px auto 0;
+        width: 300px;
+    }
+    
+    img {
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        @include media("max", "lg") {
+            transform: scale(.5);
+        }
+
+        @include media("max", "sm") {
+            transform: scale(.3);
+            right: -10px;
+        }
+    }
+}
+
+.answers_container {
+    margin: 148px auto 100px;
+    max-width: 1373px;
+    min-height: 252px;
+
+    @include media("max", "lg") {
+        margin: 44px auto 44px;
+        min-height: 152px;
+        
+    }
+}
+
+.answers {
+    position: relative;
+    max-width: 1373px;
+    min-height: 252px;
+    background: #9997F9;
+    box-shadow: 0px 4px 14px rgba(72, 71, 71, 0.25);
+    border-radius: 50px;
+    margin: 0 10px;
+
+    @include media("max", "lg") {
+        min-height: 152px;
+    }
+
+    @include media("max", "sm") {
+        min-height: 186px;
+    }
+
+    .answers_cards {
+        position: absolute;
+        top: -100px;
+        display: flex;
+        justify-content: space-evenly;
+        @include media("max", "lg") {
+            flex-wrap: wrap;
+            top: -30px;
+        }
+
+    }
+    .answers_card {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 64px;
+        @include media("max", "lg") {
+            padding: 0 24px;
+        }
+
+        @include media("max", "lg") {
+            width: 44%;
+            padding: 0 12px;
+        }
+    }
+    .answer_img {
+        height: 178px;
+        @include media("max", "lg") {
+            transform: scale(.6);
+        }
+        @include media("max", "sm") {
+            height: 40px;
+            transform: scale(.3);
+        }
+    }
+    .answer_text {
+        @extend %font_medium;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        color: #FFFFFF;
+        padding-top: 20px;
+        @include media("max", "lg") {
+            font-size: 12px;
+            line-height: 14px;
+            padding-top: 0px;
+        }
+
+        @include media("max", "sm") {
+            font-size: 12px;
+            line-height: 14px;
+            padding-top: 10px;
+        }
+    }
+}

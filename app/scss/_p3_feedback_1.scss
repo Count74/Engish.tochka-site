@@ -1,0 +1,241 @@
+.feedback_container {
+    max-width: 1400px;
+    margin: 140px auto 200px;
+
+    @include media("max", "xl") {
+        margin: 100px auto 160px;
+    }
+
+    @include media("max", "lg") {
+        margin: 80px auto 100px;
+    }
+}
+
+.feedback_1 {
+    height: 400px;
+    background: #9997F8;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 20px;
+
+    @include media("max", "lg") {
+        height: 300px;
+    }
+
+    @include media("max", "sm") {
+        height: 390px;
+        flex-direction: column;
+    }
+}
+
+.feedback_1__tor {
+    display: block;
+    position: absolute;
+    top: - 45px;
+    left: 84px;
+    width: 87px;
+    height: 90px;
+    background-image: url($images + "feedback_tor.png");
+    background-repeat: no-repeat;
+    background-position: 0;
+
+    @include media("max", "md") {
+        background-size: 50%;
+    }
+
+    @include media("max", "sm") {
+        top: -20px;
+        left: 20px;
+        background-size: 50%;
+        background-position: 0 0;
+    }
+    
+}
+
+.feedback_1__notebook {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 234px;
+    height: 400px;
+    background-image: url($images + "feedback_notebook.png");
+    background-repeat: no-repeat;
+    
+    
+    @include media("max", "md") {
+        background-size: 50%;
+    }
+
+    @include media("max", "sm") {
+        background-size: 30%;
+        background-position: -10px 10px;
+    }
+}
+
+.feedback_1__cube {
+    display: block;
+    position: absolute;
+    top: -40px;
+    right: 15px;
+    width: 86px;
+    height: 80px;
+    background-image: url($images + "feedback_cube.png");
+    background-repeat: no-repeat;
+    @include media("max", "sm") {
+        top: -20px;
+        right: -10px;
+        background-size: 50%;
+        background-position: 0 0;
+    }
+}
+
+.feedback_1__arrow {
+    display: block;
+    position: absolute;
+    bottom: 30px;
+    right: 20px;
+    width: 63px;
+    height: 54px;
+    background-image: url($images + "feedback_arrow.png");
+    @include media("max", "md") {
+        z-index: 1;
+        transform: scale(.7);
+        bottom: 32px;
+    } 
+}
+
+.feedback_1__emoji {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 205px;
+    height: 327px;
+    background-image: url($images + "feedback_emoji.png");
+    background-repeat: no-repeat;
+    
+    
+    @include media("max", "md") {
+        background-size: 50%;
+        background-position: 0 -20px;
+    }
+}
+
+.feedback_1__text {
+    margin: 32px 0 0 234px;
+    @include media("max", "md") {
+        margin: 22px 0 0 117px;
+    } 
+    @include media("max", "md") {
+        margin: 0 0 0 60px;
+    } 
+
+    h2 {
+        color: white;
+        text-align: left;
+        margin: 0;
+        max-width: 700px;
+        @media only screen and (max-width: 1400px) {
+            font-size: 34px;
+            line-height: 112%;
+        }
+
+        @media only screen and (max-width: 1100px) {
+            font-size: 20px;
+            line-height: 112%;
+        }
+
+        @media only screen and (max-width: 840px) {
+            font-size: 14px;
+        }
+
+        @include media("max", "md") {
+            max-width: 250px;
+            text-align: center;
+        }
+    }
+
+    h2.bottom {
+        min-width: 100%;
+        @include media("max", "md") {
+            max-width: 250px;
+            min-width: 250px;
+            text-align: center;
+            padding-top: 20px;
+        }
+    }
+
+    p {
+        display: block;
+        @extend %font_normal;
+        color: white;
+        font-size: 24px;
+        line-height: 28px; 
+        max-width: 510px;
+        margin-top: 20px;
+
+        @include media("max", "xl") {
+            font-size: 20px;
+            line-height: 112%;
+        }
+    
+        @include media("max", "lg") {
+            font-size: 12px;
+            line-height: 14px;
+        }
+
+        @include media("max", "md") {
+            max-width: 250px;
+            text-align: center;
+            margin-top: 10px;
+        }
+    }
+
+
+}
+
+.feedback_1__form {
+    margin: 50px 78px 0 20px;
+
+    @include media("max", "xl") {
+        margin: 20px 10px 0 10px;
+        transform: scale(.8);
+    }
+    
+    @include media("max", "lg") {
+        margin: -20px 0 0 -40px;
+    } 
+
+    @include media("max", "md") {
+        margin: 0;
+        transform: scale(1);
+    } 
+
+    .webinar input {
+        margin-bottom: 21px;
+    }
+    .send_note {
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #FFFFFF;
+        @include media("max", "md") {
+            margin-bottom: 20px;
+            width: 250px;
+            font-size: 10px;
+            line-height: 12px;
+        } 
+
+        a {
+            color: #FFFFFF;
+            text-decoration: underline;
+    
+            &:hover {
+                color:  #ccc;
+            }
+        }
+    }
+}

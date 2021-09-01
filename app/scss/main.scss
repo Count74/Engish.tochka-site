@@ -1,0 +1,111 @@
+@import 'fonts';
+@import 'reseter';
+@import 'variables';
+@import 'extentions';
+@import 'mixins';
+@import 'header';
+@import 'p1_whom';
+@import 'p2_cards';
+@import 'p3_feedback_1';
+@import 'p4_author';
+@import 'p5_reviews';
+@import 'footer';
+
+
+h2 {
+    @extend %font_bold;
+    font-size: 40px;
+    line-height: 47px;
+    text-align: center;
+    text-transform: uppercase;
+    @include media("max", "lg") {
+        font-size: 20px;
+        line-height: 24px;
+    }
+    @include media("max", "sm") {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.container {
+    max-width: 1920px;
+    background-image: url($images + $bg);
+}
+
+.send_note {
+    @extend %MuseoSansCyrl;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    width: 360px;
+    height: 51px;
+    color: #767676;
+    margin: 0 auto;
+
+    @include media("max", "lg") {
+        font-size: 8px;
+        line-height: 10px;
+        height: 21px;
+        margin: -30px auto 0;
+    }
+
+    a {
+        color: #767676;
+        text-decoration: underline;
+
+        &:hover {
+            color:  lighten(#767676, 30%);
+        }
+    }
+}
+
+.webinar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+
+    @include media("max", "lg") {
+        transform: scale(.7);
+    }
+
+    @include media("max", "sm") {
+        margin-top: -30px;
+    }
+
+    input {
+        width: 400px;
+        height: 66px;
+        margin: 0 auto 13px;
+        padding: 0 20px;
+        background: #FFFFFF;
+        box-shadow: inset 0px 4px 4px rgba(152, 152, 152, 0.25);
+        border-radius: 100px;
+        @extend %font_medium;
+        color: #afafaf;
+        font-size: 20px;
+        line-height: 24px;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::placeholder {
+            @extend %font_medium;
+            text-align: center;
+            color: #afafaf;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    }
+    input.btn {
+        background: #FE9728;
+        box-shadow: inset 0px 4px 4px #FFCC71, inset 0px -4px 4px #FB6A02;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 22px;
+        color: white;
+    }
+}

@@ -1,0 +1,141 @@
+.footer {
+    width: 100%;
+    min-height: 190px;
+    background: rgba(35, 86, 186, 0.67);
+    margin-top: 40px;
+    padding: 0 20px;
+
+    @media only screen and (max-width: 1100px) {
+        min-height: 100px;
+    }
+    
+    @include media("max", "sm") {
+        min-height: 480px;
+    }
+    
+    .footer__container{
+        max-width: 1400px;
+        margin: 0 auto;
+
+        .footer__top {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 21px;
+            align-items: center;
+            @include media("max", "sm") {
+                flex-direction: column;
+                align-content: center;
+            }
+
+            .footer__logo a img {
+                width: 210px;
+                height: 58px;
+                @media only screen and (max-width: 1100px) {
+                    width: 105px;
+                    height: 29px;
+                }
+
+            }
+
+            .footer__menu {
+                display: flex;
+                flex-grow: 3;
+                justify-content: space-evenly;
+                align-items: center;
+                @include media("max", "sm") {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+
+                .footer__menu__item {
+                    @extend %font_normal;
+                    font-size: 16px;
+                    line-height: 19px;
+                    color: #FFFFFF;
+                    text-transform: uppercase;
+                    @media only screen and (max-width: 1100px) {
+                        font-size: 10px;
+                        line-height: 12px;  
+                    }
+                    @include media("max", "sm") {
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+            .footer__buttons {
+                @include media("max", "sm") {
+                    margin-top: 20px;
+                }
+                img{
+                    margin-left: 20px;
+
+                    @media only screen and (max-width: 1100px) {
+                        margin-left: 10px;
+                        transform: scale(.6);
+                    }   
+                }
+
+                button {
+                    width: 206px;
+                    height: 52px;
+                    border: 4px solid #FFFFFF;
+                    box-sizing: border-box;
+                    border-radius: 50px;
+
+                    @extend %Gilroy_bold;
+                    font-size: 22px;
+                    line-height: 27px;
+                    text-transform: uppercase;
+                    color: #FFFFFF;
+                    margin-left: 34px;
+
+                    @media only screen and (max-width: 1100px) {
+                        width: 103px;
+                        height: 26px;
+                        font-size: 11px;
+                        line-height: 13px;
+                        margin-left: 14px;
+                    }
+                    @include media("max", "sm") {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            
+            @include media("max", "sm") {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @media only screen and (max-width: 1100px) {
+                margin-top: 20px;
+            }
+            @include media("max", "sm") {
+                margin-top: 0;
+            }
+
+            .footer__text {
+                @extend %Gilroy_medium;
+                font-size: 14px;
+                line-height: 140%;
+                color: #FFFFFF;
+                @media only screen and (max-width: 1100px) {
+                    font-size: 8px;
+                }
+                @include media("max", "sm") {
+                    margin-top: 20px;
+                    max-width: 180px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

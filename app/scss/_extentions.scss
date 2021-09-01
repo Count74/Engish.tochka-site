@@ -1,0 +1,34 @@
+%font {
+  font-family: $font_family;
+  color: $color_text;
+}
+  
+%font_normal {
+  @extend %font;
+  font-weight: normal;
+}
+
+%font_medium {
+  @extend %font;
+  font-weight: 500;
+}
+
+%font_bold {
+  @extend %font;
+  font-weight: bold;
+}
+
+%MuseoSansCyrl {
+  font-family: 'MuseoSansCyrl', sans-serif;
+  font-weight: 300;
+}
+
+%Gilroy_medium {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 500;
+}
+
+%Gilroy_bold {
+  font-family: 'Gilroy', sans-serif;
+  font-weight: bold;
+}
